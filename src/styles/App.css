@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* --- Reset --- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* --- root --- */
+#root {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../styles/images/bg-3.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*--- app ---*/
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#app .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 5rem;
+}
+/*--- weather ---*/
+#weather-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+}
+#weather-page .weather {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+#weather-page .top {
+  display: flex;
+  gap: 1.5rem;
+}
+#weather-page .top p:nth-of-type(1) {
+  font-size: 24px;
+  font-weight: bolder;
+}
+#weather-page .top img {
+  width: 72px;
+  height: 72px;
+}
+
+/* --- login-page --- */
+#login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  height: auto;
+}
+#login-page .login-box {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  max-width: 450px;
+  align-items: center;
+}
+#login-page .login-box input {
+  flex: 1;
+  width: 100%;
+  min-height: 4rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  border-radius: 0.5rem;
+  border: none;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 0px 5px #fff;
+  font-size: 1.5rem;
+}
+#login-page .login-box input::placeholder {
+  color: #e5e5e5;
+}
+#login-page .login-box button {
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  color: #fff;
+  box-shadow: 0px 0px 5px #fff;
+  transition: 0.3s;
+}
+#login-page .login-box button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #222;
+}
+#login-page .login-box button p {
+  font-size: 1rem;
+}
+/* --- hello-page --- */
+#hello-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+#hello-page .logout-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+#hello-page .logout-box h2 {
+  flex: 1;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+#hello-page .logout-box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  color: #fff;
+  box-shadow: 0px 0px 5px #fff;
+  transition: 0.3s;
+}
+#hello-page .logout-box button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #222;
+}
+#hello-page .logout-box button p {
+  font-size: 1rem;
+}
+
+/* --- todo-form --- */
+#todo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#todo-form .todo-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  min-height: 8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+
+#todo-form .todo-box p {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+#todo-form .todo-box form {
+  width: 100%;
+}
+
+#todo-form .todo-box input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  /* background-color: rgba(255,255,255, 0.5); */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+#todo-form .todo-box input::placeholder {
+  color: #e5e5e5;
+}
+/* --- TodoList ---*/
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  /* max-height: calc(3*3.5rem);
+  overflow-y: auto;
+  padding-right: 0.5rem; */
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#todo-list span {
+  flex: 1;
+}
+#todo-list input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#todo-list button {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 0.25rem;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #222;
+  background-color: #fff;
+  transition: 0.3s;
+}
+#todo-list button:hover {
+  background-color: #ccc;
+}
+.todo-page {
+  color: #fff;
+  width: 100%;
+}
+/* --- timer --- */
+#timer {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+#timer .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  padding: 1.5rem;
+  min-height: 8rem;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+#timer .time p {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+#timer .time .btn {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+#timer .time .btn button {
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  transition: 0.3s;
+}
+#timer .time .btn button.active {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+#timer .time .btn button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+#timer .time .category {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#timer .time .category button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  color: #888;
+  transition: 0.3s;
+}
+#timer .time .category button.active {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+#timer .time .category button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+/* --- Quotes --- */
+#quote-page {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#quote-page p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+#quote-page small {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+/* --- clock --- */
+#clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+#clock .time h2 {
+  color: #fff;
+  font-size: 100px;
+}
